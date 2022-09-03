@@ -1,14 +1,13 @@
 import { useState } from 'react'
 import './App.css'
+import Routes from './routes'
 
 function App() {
- 
-
-  return (
-    <div>
-    <h2>Blog</h2>
-    </div>
-  )
+  return<>
+    <Routes />
+  </>
+    
+  
 }
 
 export default App
