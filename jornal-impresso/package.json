@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "vercel-build": " next build"
+    "vercel-build": "next build"
   },
   "dependencies": {
     "graphql": "^16.6.0",
