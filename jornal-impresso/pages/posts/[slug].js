@@ -1,6 +1,7 @@
-import styles from '../../styles/slug.module.css'
-import {GraphQLClient, gql} from 'graphql-request'
+import styles from '../../styles/Slug.module.css';
+import {GraphQLClient, gql} from 'graphql-request';
 import moment from "moment";
+import Image from 'next/image';
 
 // conexão com a API
 const graphcms = new GraphQLClient("https://api-sa-east-1.hygraph.com/v2/cl9c8y4wo4g7701t6cy9f4x40/master")
