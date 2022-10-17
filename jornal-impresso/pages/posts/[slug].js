@@ -61,11 +61,11 @@ export default function BlogPost({post}){
             <img src={post.fotoInicial.url} className={styles.cover}/>
             <div className={styles.title}>
                 <div className={styles.authimg}>
-                <img  src={post.author.avatar.url }/> 
-                    <h6>By {post.author.nome}</h6>
-                </div>
+                <img src={post.author.avatar.url }/> 
                 <div className={styles.authtext}>
+                    <h6>By {post.author.nome}</h6>
                     <h6 className={styles.date}>{moment(post.data).format("MMMM d, YYYY")}</h6>
+                </div>
                     </div>   
             </div>
             <h2>{post.title}</h2>

@@ -37,6 +37,10 @@
     border-radius: 20px;
     
   }
+  .authimg{
+    display: flex;
+    flex-direction: row;
+  }
   
   .cover {
     width: 100%;
