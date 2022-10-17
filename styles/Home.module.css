@@ -1,0 +1,15 @@
+.title h1 {
+  color: rgb(39, 39, 39);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+  font-size: 2rem;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 3rem;
+}
+
