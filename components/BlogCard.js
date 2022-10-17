@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styles from '../styles/blogcard.module.css'
+import styles from '../styles/blogcard.module.css';
 import Image from 'next/image';
 import moment from 'moment';
 export default function BlogPost({title, author, date,coverPhoto, key, slug}){
