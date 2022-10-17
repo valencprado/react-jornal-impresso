@@ -32,7 +32,8 @@
   }
 
   .authimg img{
-    width: 4em;
+    width: 3em;
+    height: 3em;
     border-radius: 20px;
     
   }
