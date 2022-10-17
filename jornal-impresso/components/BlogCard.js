@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import styles from '../styles/blogcard.module.css';
+import Link from 'next/link';
+import styles from '../styles/BlogCard.module.css';
 import Image from 'next/image';
 import moment from 'moment';
 export default function BlogPost({title, author, date,coverPhoto, key, slug}){
@@ -7,6 +7,10 @@ return(
     <div className={styles.card}>
        
       <Link href={`/posts/${slug}`}>
+        <div className={styles.imgContent}>
+            <Image width='683em' height='100em' src={coverPhoto.url} alt="" />
+        </div>
+      </Link>
       <div className={styles.text}>
         <h2>{title}</h2>
         <div className={styles.details}>
@@ -19,9 +23,8 @@ return(
           </div>
         </div>
       </div>
-      </Link>
     </div>
 );
 }
 
-//  <Image width='100%' height='100%' src={coverPhoto.url} alt="" />
+//  
