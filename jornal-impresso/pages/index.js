@@ -5,6 +5,8 @@ import {GraphQLClient, gql} from 'graphql-request';
 import BlogCard from '../components/BlogCard';
 import Nav from  '../components/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
+import {useState} from 'react';
 // conexão com a API
 const graphcms = new GraphQLClient("https://api-sa-east-1.hygraph.com/v2/cl9c8y4wo4g7701t6cy9f4x40/master")
 const query = gql`
@@ -38,18 +40,39 @@ export async function getStaticProps(){
     revalidate: 10,
   };
 }
+
 export default function Home({posts}) {
+  const [isActive, setIsActive] = useState(false);
+
+  const handleClick = () => {
+    // 👇️ toggle
+    setIsActive(current => !current);
+
+    // 👇️ or set to true
+    // setIsActive(true);
+  };
+
   return (
-    <div className={styles.container}>
+    <div className={styles.container} >
       <Head>
         <title>Blog - Jornal Impresso</title>
         <meta name="description" content="Notícias, artigos, reportagens e muito mais!" />
         <link rel='icon' href='https://img.icons8.com/3d-fluency/32/000000/news.png'/>
       </Head>
       <Nav />
-      <main className={styles.main}>
+      
+      <Button style={{
+          backgroundColor: isActive ? '#212529' : 'white',
+          color: isActive ? 'white' : '#212529',
+        }}
+        onClick={handleClick}variant="light">Light
+        </Button>{' '}
+
+      <main className={styles.main} >
        {posts.map((post )=>(
         <BlogCard 
+        
+        
         title={post.titulo} 
         author={post.author} 
         coverPhoto={post.fotoInicial} 

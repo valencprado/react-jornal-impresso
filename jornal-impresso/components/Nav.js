@@ -11,9 +11,10 @@ function ColorSchemesExample() {
         <Container>
           <Navbar.Brand href="">Jornal Blog</Navbar.Brand>
           <Nav className="navbarspacing">
-            <Nav.Link href="https://jornal-impresso.vercel.app">Home</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/Autores">Autores</Nav.Link>
             <Nav.Link href="/Sobre">Sobre</Nav.Link>
+            
           </Nav>
         </Container>
       </Navbar>
