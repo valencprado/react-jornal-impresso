@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css';
 import {GraphQLClient, gql} from 'graphql-request';
 import BlogCard from '../components/BlogCard';
 import Nav from  '../components/Nav';
+import 'bootstrap/dist/css/bootstrap.min.css';
 // conexão com a API
 const graphcms = new GraphQLClient("https://api-sa-east-1.hygraph.com/v2/cl9c8y4wo4g7701t6cy9f4x40/master")
 const query = gql`
