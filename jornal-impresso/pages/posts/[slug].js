@@ -6,6 +6,8 @@ import ColorSchemesExample from '../../components/Nav';
 //import Nav from  '../components/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from 'react-bootstrap/Navbar';
+import Button from 'react-bootstrap/Button';
+import {useState} from 'react';
 // conexão com a API
 const graphcms = new GraphQLClient("https://api-sa-east-1.hygraph.com/v2/cl9c8y4wo4g7701t6cy9f4x40/master")
 const query = gql`
@@ -59,10 +61,20 @@ export async function getStaticProps({params}){
 }
 
 export default function BlogPost({post}){
+  const [isActive, setIsActive] = useState(false);
+
+  const handleClick = () => {
+    // 👇️ toggle
+    setIsActive(current => !current);
+
+    // 👇️ or set to true
+    // setIsActive(true);
+  };
      return(
       
         <main className={styles.blog}>
           <ColorSchemesExample />
+          
             <img src={post.fotoInicial.url} className={styles.cover}/>
             <div className={styles.title}>
                 <div className={styles.authimg}>
