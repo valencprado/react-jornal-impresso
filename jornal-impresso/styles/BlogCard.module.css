@@ -1,5 +1,5 @@
 .card {
-    margin-top: 5rem;
+    margin-top: 0rem;
     border-radius: 2rem;
     overflow: hidden;
     box-shadow: 15px 20px 40px rgba(216, 211, 211, 0.4);
@@ -61,7 +61,7 @@
     text-align: center;
   }
   
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 60%) {
     .card {
       margin: 0rem 2rem;
       text-align: center;    }

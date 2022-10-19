@@ -7,6 +7,7 @@ import Nav from  '../components/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import {useState} from 'react';
+import ColorSchemesExample from '../components/Nav';
 // conexão com a API
 const graphcms = new GraphQLClient("https://api-sa-east-1.hygraph.com/v2/cl9c8y4wo4g7701t6cy9f4x40/master")
 const query = gql`
@@ -46,32 +47,48 @@ export default function Home({posts}) {
   const [isActive, setIsActive] = useState(false);
 
   const handleClick = () => {
-    // 👇️ toggle
+    // toggle
     setIsActive(current => !current);
 
-    // 👇️ or set to true
-    // setIsActive(true);
+    
   };
 
   return (
-    <div className={styles.container} >
+    <div className={styles.slug} style={{
+      backgroundColor: isActive ? '#212529' : 'white',
+      color: isActive ? 'white' : '#212529',
+    }}>
+    <div className={styles.container} style={{
+      backgroundColor: isActive ? '#212529' : 'white',
+      color: isActive ? 'white' : '#212529',
+    }}>
       <Head>
         <title>Blog - Jornal Impresso</title>
         <meta name="description" content="Notícias, artigos, reportagens e muito mais!" />
         <link rel='icon' href='https://img.icons8.com/3d-fluency/32/000000/news.png'/>
       </Head>
-      <Nav />
-      
+      <ColorSchemesExample />
+
       <Button style={{
           backgroundColor: isActive ? '#212529' : 'white',
           color: isActive ? 'white' : '#212529',
         }}
-        onClick={handleClick}variant="light">Light
-        </Button>{' '}
+        onClick={handleClick}variant="light">{isActive ? 'Light': 'Dark'}
+        </Button>
 
-      <main className={styles.main} >
+      <main className={styles.main} style={{
+          backgroundColor: isActive ? '#212529' : 'white',
+          color: isActive ? 'white' : '#212529',
+        }} >
        {posts.map((post )=>(
-        <BlogCard 
+        <div className={styles.BlogCard} style={{
+          backgroundColor: isActive ? 'white' : 'white',
+          color: isActive ? 'white' : '#212529',
+          marginTop: isActive ? '0rem' : '0rem',
+          borderRadius: isActive ? '2rem' : '5rem'
+          
+        }}>
+          <BlogCard 
         
         
         title={post.titulo} 
@@ -80,10 +97,12 @@ export default function Home({posts}) {
         key={post.id} 
         date={post.data} 
         slug={post.slug}/>
+        </div>
        ))}
+       
       </main>
 
-      
+      </div>
     </div>
   )
 }
