@@ -1,26 +1,21 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import styles from '../styles/Home.module.css';
-import {GraphQLClient, gql} from 'graphql-request';
-import BlogCard from '../components/BlogCard';
+import Link from 'next/link';
+import styles from '../styles/Sobre.module.css';
 import Nav from  '../components/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-// conexão com a API
 
 export default function Sobre({posts}) {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Blog - Jornal Impresso</title>
-        <meta name="description" content="Notícias, artigos, reportagens e muito mais!" />
-        <link rel='icon' href='https://img.icons8.com/3d-fluency/32/000000/news.png'/>
-      </Head>
+    <div>
       <Nav />
-      <main className={styles.main}>
+      <main className={styles.content}>
        <Card>
-        <h3>Valen depois arruma aqui pra mim? coloca umas infos sobre o trabalho plz</h3>
+        <h2 className={styles.title}>Jornal Impresso, Geografia e Madre Paula!</h2>
+        <p>&emsp;Por aqui, serão postados diversos textos envolvendo atualidades, notícias e informações pertinentes aos alunos. O blog foi criado em 2022, com o apoio dos professores Victor Hugo e Maria Cristina.</p>
+        <p>&emsp;O objetivo desse site é aproximar os alunos da escrita, do pensamento crítico e da importância do conhecimento de mundo necessário para viver em sociedade. Esperamos que goste do conteúdo!</p>
+
+       <p className={styles.link}>Desenvolvido por <Link href={'https://www.linkedin.com/in/valentinacprado/'}>Valentina C. Prado</Link> e <Link href={'https://www.linkedin.com/in/gustavo-moura-souza/'}>Gustavo Moura</Link>.</p>
+        <h6 className={styles.footer}>2022. Todos os direitos reservados.</h6>
        </Card>
       </main>
 
