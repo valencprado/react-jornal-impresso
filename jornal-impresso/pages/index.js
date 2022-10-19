@@ -22,7 +22,7 @@ const query = gql`
     }
     author {
       nome
-      
+      slug
       avatar {
         url
       }
