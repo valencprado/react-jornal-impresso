@@ -20,7 +20,7 @@ export default function Sobre({posts}) {
       <Nav />
       <main className={styles.main}>
        <Card>
-        <h3>Valeeeeeennn depois a gnt vê oq colocar aqui mas agr existe ao menos</h3>
+        <h3>👍👍</h3>
        </Card>
       </main>
 
