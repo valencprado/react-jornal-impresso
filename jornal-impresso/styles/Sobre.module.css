@@ -1,0 +1,10 @@
+.title, .footer{
+    text-align: center;
+}
+.content{
+margin-left: 2em;
+}
+.link a {
+    font-size: 18px;
+    text-decoration: none;
+}
