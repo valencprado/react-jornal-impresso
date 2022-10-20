@@ -91,7 +91,7 @@ export default function Home({posts}) {
           <BlogCard 
         
         
-      
+        key={post.id} 
         title={post.titulo} 
         author={post.author} 
         coverPhoto={post.fotoInicial} 
