@@ -91,10 +91,10 @@ export default function Home({posts}) {
           <BlogCard 
         
         
+      
         title={post.titulo} 
         author={post.author} 
         coverPhoto={post.fotoInicial} 
-        key={post.id} 
         date={post.data} 
         slug={post.slug}/>
         </div>
