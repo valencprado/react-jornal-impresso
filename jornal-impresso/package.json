@@ -22,5 +22,10 @@
   "devDependencies": {
     "eslint": "8.25.0",
     "eslint-config-next": "12.3.1"
+  },
+  "extends":{
+      "rules":{
+        "react/no-unescaped-entities": "off"
+      }
   }
 }
