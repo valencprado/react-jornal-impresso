@@ -1,4 +1,4 @@
-import styles from '../../styles/Slug.module.css';
+/*import styles from '../../styles/Slug.module.css';
 import {GraphQLClient, gql} from 'graphql-request';
 import moment from "moment";
 import Image from 'next/image';
@@ -69,3 +69,5 @@ export default function BlogPost({post}){
         
      )
 }
+
+*/
