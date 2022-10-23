@@ -22,6 +22,7 @@ const query = gql`
     }
     author {
       nome
+      descricao{ html }
       avatar {
         url
       }
@@ -39,7 +40,7 @@ export async function getStaticProps(){
       posts,
     },
     revalidate: 10,
-  };
+  }; 
 }
 
 export default function Home({posts}) {
