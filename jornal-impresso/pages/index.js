@@ -80,7 +80,9 @@ export default function Home({posts}) {
           color: isActive ? 'white' : '#212529',
         }} >
        {posts.map((post )=>(
-        <div className={styles.BlogCard} style={{
+        <div className={styles.BlogCard} 
+        key={null}
+        style={{
           backgroundColor: isActive ? 'white' : 'white',
           color: isActive ? 'white' : '#212529',
           marginTop: isActive ? '0rem' : '0rem',
@@ -90,7 +92,7 @@ export default function Home({posts}) {
           <BlogCard 
         
         
-        key={post.id} 
+        key={post.id}   
         title={post.titulo} 
         author={post.author} 
         coverPhoto={post.fotoInicial} 
