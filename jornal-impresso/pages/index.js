@@ -68,12 +68,12 @@ export default function Home({posts}) {
       </Head>
       <ColorSchemesExample />
 
-      {/* <Button style={{
+      <Button style={{
           backgroundColor: isActive ? '#212529' : 'white',
           color: isActive ? 'white' : '#212529',
         }} 
         onClick={handleClick}variant="light">{isActive ? 'Light': 'Dark'}
-        </Button> */}
+        </Button>
 
       <main className={styles.main} style={{
           backgroundColor: isActive ? '#212529' : 'white',

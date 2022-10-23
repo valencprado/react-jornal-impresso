@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "vercel-build": "yarn run next build"
+    "lint": "next lint"
+
   },
   "dependencies": {
     "bootstrap": "^5.2.2",
