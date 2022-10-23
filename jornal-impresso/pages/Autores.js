@@ -9,14 +9,10 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 // conexão com a API
 
-export default function Sobre({posts}) {
+export default function Sobre({}) {
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Blog - Jornal Impresso</title>
-        <meta name="description" content="Notícias, artigos, reportagens e muito mais!" />
-        <link rel='icon' href='https://img.icons8.com/3d-fluency/32/000000/news.png'/>
-      </Head>
+    
       <Nav />
       <main className={styles.main}>
        <Card>
