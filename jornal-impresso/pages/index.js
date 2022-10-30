@@ -22,7 +22,7 @@ const query = gql`
     }
     author {
       nome
-      descricao{ html }
+      descricao{ raw }
       avatar {
         url
       }
