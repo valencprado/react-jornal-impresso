@@ -1,4 +1,4 @@
-# Viola News 📰🗞️
+# Jornal Blog 📰🗞️
 Blog sobre atualidades e textos jornalísticos do itinerário formativo de Jornal Impresso e Geografia.
 
 ## Feito com: 
