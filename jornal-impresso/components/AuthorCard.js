@@ -11,7 +11,7 @@
            <img src={avatar.url} alt={descricao} />
        </div>
      <div className={styles.text}>
-       <h2>{nome}</h2>
+       <h3>{nome}</h3>
        </div>
      </div> 
  );
