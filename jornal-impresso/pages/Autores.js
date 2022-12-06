@@ -10,7 +10,7 @@ import ColorSchemesExample from '../components/Nav';
 const graphcms = new GraphQLClient("https://api-sa-east-1.hygraph.com/v2/cl9c8y4wo4g7701t6cy9f4x40/master")
 const query = gql`
 {
-  authors {
+  authors(orderBy: nome_ASC) {
     avatar {
       url
     }
